@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Энциклопедия химических элементов</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/elements.css">
+    <link rel="stylesheet" href="css/modals.css">
+    <link rel="stylesheet" href="css/planets.css">
+    <link rel="stylesheet" href="css/games.css">
+</head>
+<body>
+    <!-- Анимированные книги на фоне -->
+    <div class="book"></div>
+    <div class="book"></div>
+    <div class="book"></div>
+    <div class="book"></div>
+    <div class="book"></div>
+    <div class="book"></div>
+
+    <div class="container">
+        <header>
+            <h1>Энциклопедия химических элементов</h1>
+            <p class="subtitle">Исследуйте удивительный мир химии и элементов</p>
+        </header>
+
+        <div class="button-container">
+            <button class="main-button" id="studyBtn">Изучение</button>
+            <div class="secondary-buttons">
+                <button class="secondary-button" id="scientistsBtn">Земная кора</button>
+                <button class="secondary-button" id="allElementsBtn">Все элементы</button>
+                <button class="secondary-button" id="planetsBtn">Планеты</button>
+                <button class="secondary-button" id="colorsBtn">Цвета</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Энциклопедия химических элементов.</p>
+    </footer>
+
+    <!-- Модальное окно со всеми элементами -->
+    <div class="elements-modal" id="elementsModal">
+        <div class="elements-container">
+            <button class="close-button" id="closeModal">&times;</button>
+            <h2>Все химические элементы</h2>
+            <p>Выберите элемент для просмотра информации</p>
+            <div class="elements-grid" id="elementsGrid"></div>
+        </div>
+    </div>
+
+    <!-- Окно с информацией об элементе -->
+    <div class="element-info" id="elementInfo">
+        <div class="element-header">
+            <h2 class="element-title" id="infoTitle">Водород (H)</h2>
+        </div>
+        <div class="element-content">
+            <img class="element-image" id="elementImage" src="" alt="Изображение элемента">
+            <div class="element-facts">
+                <div id="factsContainer"></div>
+                <div class="slide-indicator" id="slideIndicator">Страница 1 из 3</div>
+            </div>
+            <div class="navigation-buttons">
+                <button class="nav-btn" id="prevSlide">← Назад</button>
+                <button class="nav-btn" id="nextSlide">Вперед →</button>
+            </div>
+            <button class="close-info" id="closeInfo">Закрыть</button>
+        </div>
+    </div>
+
+    <!-- Модальное окно Изучение -->
+    <div id="studyModal" class="study-modal">
+        <div class="study-container">
+            <button class="study-close" id="closeStudy">&times;</button>
+            <h2>Выберите тему для изучения</h2>
+            <p>Нажмите на тему, чтобы выбрать тест</p>
+            <div class="topics-grid">
+                <div class="topic-card" data-topic="gases">
+                    <div class="topic-icon">🎈</div>
+                    <h3>Газы</h3>
+                </div>
+                <!-- Добавьте другие темы здесь -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно выбора теста -->
+    <div id="testsModal" class="tests-modal">
+        <div class="tests-container">
+            <button class="tests-close" id="closeTests">&times;</button>
+            <h2 id="testsTitle">Выберите тест</h2>
+            <div class="tests-grid">
+                <div class="test-card" data-test="1">
+                    <div class="test-number">1</div>
+                    <h4>Первый тест</h4>
+                    <p>Проверьте свои знания!</p>
+                </div>
+                <!-- Добавьте другие тесты здесь -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно химического детектива -->
+    <div id="colorsModal" class="colors-modal">
+        <!-- Содержимое игры в цветах -->
+    </div>
+
+    <!-- Модальное окно Земная кора -->
+    <div id="scientistsModal" class="scientists-modal">
+        <!-- Содержимое диаграммы земной коры -->
+    </div>
+
+    <!-- Модальное окно планет -->
+    <div id="planetsModal" class="planets-modal">
+        <div class="planets-container">
+            <button class="planets-close" id="closePlanets">&times;</button>
+            <div id="container3d">
+                <div id="title3d">3D Солнечная система</div>
+                <!-- Содержимое 3D сцены -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Подключение Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
+    
+    <!-- Подключение ваших скриптов -->
+    <script src="js/main.js"></script>
+    <script src="js/elements.js"></script>
+    <script src="js/planets.js"></script>
+    <script src="js/games.js"></script>
+    <script src="js/quiz.js"></script>
+</body>
+</html>
